@@ -1,6 +1,41 @@
 #include <vector>
 #include <string>
 
+using std::string
+
+// Particle species class
+class ParticleSpecies3d3v{
+	public:
+		// Constructor
+		ParticleSpecies3d3v(size_t N, size_t Q, string ID) :
+		species_id_(ID) , N_(N), Q_(Q), 
+		particle_x_(N, 0.0), particle_y_(N, 0.0), particle_z_(N, 0.0), 
+		particle_vx_(N, 0.0), particle_vy_(N, 0.0), particle_vz_(N, 0.0),
+		particle_Fx_(N, 0.0), particle_Fy_(N, 0.0), particle_Fz_(N, 0.0),
+		xfound_(N, 0), yfound_(N, 0), zfound_(N, 0)
+		{}
+		
+		// Boilerplate, abandon all hope of not reading accessor and getters, ye who enter here!
+		
+		
+	private:
+		string species_id_;
+	    size_t N_;
+        double Q_;
+        std::vector<double> particle_x_;
+		std::vector<double> particle_y_;
+		std::vector<double> particle_z_;
+        std::vector<double> particle_vx_;
+        std::vector<double> particle_vy_;
+        std::vector<double> particle_vz_;
+        std::vector<double> particle_Fx_;
+        std::vector<double> particle_Fy_;
+        std::vector<double> particle_Fz_;
+        std::vector<size_t> xfound_;
+        std::vector<size_t> yfound_;
+        std::vector<size_t> zfound_;
+};
+
 // Class to collect all the particles together
 class ParticleList{
     public:
@@ -40,6 +75,8 @@ class ParticleList{
     private:
         size_t N_;
         std::vector<double> particles_x;
+		std::vector<double> particles_y;
+        std::vector<double> particles_z;
         std::vector<double> particles_vx;
         std::vector<double> particles_Ex;
         std::vector<size_t> x_found;
