@@ -1,5 +1,7 @@
 #include <vector>
 
+#include "Particles.hpp"
+
 // Function to concatenate particle species together into ParticleList
 size_t ConcatenateParticles(std::vector<ParticleSpecies3d3v> &ParticleList){
     size_t status = 0;
