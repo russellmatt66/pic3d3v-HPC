@@ -1,3 +1,6 @@
+#ifndef PARTICLES_3D3V_HPP
+#define PARTICLES_3D3V_HPP
+
 #include <vector>
 #include <string>
 
@@ -8,6 +11,17 @@ class CartesianPoint{
         CartesianPoint(double x, double y, double z) :
             x_(x), y_(y), z_(z)
         {}
+
+        const double X() const { return x_; }
+        const double Y() const { return y_; }
+        const double Z() const { return z_; }
+
+        double& X() { return x_; }
+        double& Y() { return y_; }
+        double& Z() { return z_; }
+
+        // Space for member functions that do typical things like compute norms
+
     private:
         double x_, y_, z_;
 };
@@ -224,3 +238,4 @@ class ParticleList{
         std::vector<size_t> yfound_;
         std::vector<size_t> zfound_;
 };
+#endif

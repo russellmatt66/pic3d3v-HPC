@@ -1,3 +1,5 @@
+#ifndef PIC_3D3V_HPP
+#define PIC_3D3V_HPP
 #include <vector>
 
 #include "Particles.hpp"
@@ -16,3 +18,4 @@ size_t ConcatenateParticles(std::vector<ParticleSpecies3d3v> &ParticleList){
 size_t findParticle(const CartesianPoint& ParticleLocation, Grid3d3v& Grid){
 
 }
+#endif
