@@ -6,26 +6,6 @@
 
 using std::string;
 
-class CartesianPoint{
-    public:
-        CartesianPoint(double x, double y, double z) :
-            x_(x), y_(y), z_(z)
-        {}
-
-        const double X() const { return x_; }
-        const double Y() const { return y_; }
-        const double Z() const { return z_; }
-
-        double& X() { return x_; }
-        double& Y() { return y_; }
-        double& Z() { return z_; }
-
-        // Space for member functions that do typical things like compute norms
-
-    private:
-        double x_, y_, z_;
-};
-
 // Particle species class
 /* Refactor these to work with CartesianPoint class (?) */
 class ParticleSpecies3d3v{
