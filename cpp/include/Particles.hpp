@@ -3,7 +3,17 @@
 
 using std::string;
 
+class CartesianPoint{
+    public:
+        CartesianPoint(double x, double y, double z) :
+            x_(x), y_(y), z_(z)
+        {}
+    private:
+        double x_, y_, z_;
+};
+
 // Particle species class
+/* Refactor these to work with CartesianPoint class (?) */
 class ParticleSpecies3d3v{
     public:
         // Constructor
